@@ -10,14 +10,14 @@ def page2(gameState: dict) -> int:
         gameState["inventaire"].append("abri")
         gameState["faim"]=60
         print(f"Tu as maintenant un bel abri, mais tu as perdu de l'énergie. Faim : {gameState['faim']}")
-        res = 2
+        res = 4
     elif choix == "2":
         gameState["inventaire"].append("canne à peche")
         gameState["faim"]=90
         print(f"Tu pourra maintetant te nourrir à ta faim, quand tui prendra le temps d'aller pecher. D'ailleurs tu viens d'en attraper un. Faim : {gameState['faim']}")
-        res = 2
+        res = 3
     else:
         print("Choix invalide.")
         res = 2
-
+        
     return res
