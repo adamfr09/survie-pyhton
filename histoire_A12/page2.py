@@ -13,7 +13,7 @@ def page2(gameState: dict) -> int:
         res = 2
     elif choix == "2":
         gameState["inventaire"].append("canne à peche")
-        gameState["faim"]=100
+        gameState["faim"]=90
         print(f"Tu pourra maintetant te nourrir à ta faim, quand tui prendra le temps d'aller pecher. D'ailleurs tu viens d'en attraper un. Faim : {gameState['faim']}")
         res = 2
     else:
