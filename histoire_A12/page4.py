@@ -10,12 +10,12 @@ def page4(gameState: dict) -> int:
         gameState["faim"] -= 5
         gameState["vie"] += 20
         print(f"Tu es maintetant en pleine forme. Faim : {gameState['faim']}     Vie :{gameState['vie']} ")
-        res = 6
+        res = 8
     elif choix == "2":
-        print(f"Tu as choisi de t'aventurer sur l'ile a tes risques et perils.")
+        print(f"Tu as choisi de t'aventurer sur l'ile à tes risques et périls.")
         res = 7
     else:
         print("Choix invalide.")
-        res = 4
+        res = 5
     
     return res
