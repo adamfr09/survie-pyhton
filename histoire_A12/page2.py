@@ -18,6 +18,5 @@ def page2(gameState: dict) -> int:
         res = 3
     else:
         print("Choix invalide.")
-        res = 2
-        
+        res = 2  
     return res

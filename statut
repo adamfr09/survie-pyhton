@@ -1,0 +1,12 @@
+def statut(faim, vie, inventaire):
+	"""Affiche les statistiques du joueur."""
+	print("=== Statistiques du joueur ===")
+	print(f"Faim : {faim}")
+	print(f"Vie : {vie}")
+	print("Inventaire :")
+
+	if inventaire:
+		for objet, quantite in inventaire.items():
+			print(f"- {objet} : {quantite}")
+	else:
+		print("- Vide")
