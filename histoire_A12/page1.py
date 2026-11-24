@@ -1,7 +1,10 @@
+from ASCII.ascii_epave import ascii_epave
+from ASCII.ascii_plage_choix import ascii_plage_choix
 def page1(gameState: dict) -> int:
     res: int = -2                     # par défaut : cas non prévu
-
+    ascii_epave()
     print(f"{gameState['nom']}, Tu est au milieu de la plage entouré de débris et de cadavre. Pour commencer ta survie que préfère tu faire")
+    ascii_plage_choix()
     print("1 - Fouiller les bagages  2 - Fouiller les cadavres")
     choix: str = input("> ")
 

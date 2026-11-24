@@ -7,14 +7,14 @@ def page5(gameState: dict) -> int:
         if choix == "1":
             print("Tu as utilisé la fusée de détresse. Mais le bateau est trop loin et ne te voit pas. Tu as perdu ta fusée de détresse. Tu dois maintenant trouver un autre moyen de survie.")
             gameState["inventaire"].remove("fusée de détresse")
-            res = 8
+            res = 6
         elif choix == "2":
             print("Tu as choisi de ne pas utiliser la fusée de détresse. Tu dois continuer à survivre.")
-            res = 8
+            res = 6
         else:
             print("Choix invalide.")
             res = 5
     elif "fusée de détresse" not in gameState["inventaire"]:
-        print("Malheureusement, tu n'as aucun moyen de signaler ta position. Tu dois continuer à survivre.")
-        res = 8
+        print("Malheureusement, tu n'as aucun moyen de signaler ta position, car tu n'a pas trouvé de fusée de détresse.Tu dois continuer à survivre.")
+        res = 6
     return res

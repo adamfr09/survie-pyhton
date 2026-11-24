@@ -1,22 +1,23 @@
-def page5(gameState: dict) -> int:
-    res: int = -2
+def page6(gameState: dict) -> int:
+    res: int = -2                     # par défaut : cas non prévu
 
-    print("Tu as beaucoup marché et tu t'es perdue. Soit tu coupes par la forêt pour rentrer au campement, soit tu rentres par la plage.")
-    print("1 - Forêt  2 - Plage")
+    print("Après avoir recuperé des objets, tu te demande maintenat ce que tu va pouvoir faire des debris en bois de ton ancien bateau.")
+
+    print("1 - Construire un abri  2 - Faire une canne à peche")
     choix: str = input("> ")
     
     if choix == "1":
-        if "chaussures" in gameState["inventaire"]:
-            print("Tu as choisi de couper par la forêt. Heureusement, tu as des chaussures qui t'ont protégé et tu arrives à rentrer au campement plus rapidement.")
-        elif "chaussures" not in gameState["inventaire"]:
-            print("Tu as choisi de couper par la forêt. Malheureusement, tu n'as pas de chaussures un serpent surgit des buissons et te mord.")
-            gameState["vie"] -= 50
-            print(f"Vie : {gameState['vie']}     Faim : {gameState['faim']}")
-        res = 8
+        gameState["inventaire"].append("abri")
+        gameState["faim"]=60
+        print(f"Tu as maintenant un bel abri, mais tu as perdu de l'énergie. Faim : {gameState['faim']}")
+        res = 4
     elif choix == "2":
-        res = 7
+        gameState["inventaire"].append("canne à peche")
+        gameState["faim"]=80
+        print(f"Tu pourra maintetant te nourrir à ta faim, quand tui prendra le temps d'aller pecher. D'ailleurs tu viens d'en attraper un. Faim : {gameState['faim']}")
+        res = 3
     else:
         print("Choix invalide.")
-        res = 5
-
+        res = 6
+        
     return res
