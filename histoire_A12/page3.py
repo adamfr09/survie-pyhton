@@ -1,6 +1,8 @@
+from ASCII.ascii_peche_plage import ascii_peche_plage
 def page3(gameState: dict) -> int:
     res: int = -2                     # par défaut : cas non prévu
 
+    ascii_peche_plage()
     print("Prèfères tu pecher toute l'après-midi, pour pouvoir te faire un stock de nourriture, ou te reposer afin de reprendre des forces?")
 
     print("1 - Pêcher  2 - Repos")

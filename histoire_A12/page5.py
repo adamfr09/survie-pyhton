@@ -17,4 +17,5 @@ def page5(gameState: dict) -> int:
     elif "fusée de détresse" not in gameState["inventaire"]:
         print("Malheureusement, tu n'as aucun moyen de signaler ta position, car tu n'a pas trouvé de fusée de détresse.Tu dois continuer à survivre.")
         res = 6
+
     return res
